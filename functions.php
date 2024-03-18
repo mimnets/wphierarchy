@@ -26,6 +26,13 @@ add_action( 'wp_enqueue_script', 'wphierarchy_enqueue_styles' );
 
 
 
+// Register Menu locations
+function wphierarchy_register_nav_menu()
+{
+    register_nav_menu('primary', 'Primary Menu');
+}
+add_action('after_setup_theme', 'wphierarchy_register_nav_menu');
+
 
 
 
